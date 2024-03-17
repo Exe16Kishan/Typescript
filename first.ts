@@ -45,22 +45,23 @@
 // console.log(sum)
 
 // calculator 
-function calculate(a:number,b:number,type:string):number {
-    if (type==="sum") {
-        return a+b;
-    }
-    if (type==="mul") {
-        return a*b;
-    }
-    if (type==="div") {
-        return a/b;
-    }
-    if (type==="sub") {
-        return a-b;
-    }
-    else{
-        return 0;
-    }
-}
-const result = calculate(10,10,"mul");
-console.log(result);
+// function calculate(a:number,b:number,type:"sum"|"mul"|"div"|"sub"):number {
+//     if (type==="sum") {
+//         return a+b;
+//     }
+//     if (type==="mul") {
+//         return a*b;
+//     }
+//     if (type==="div") {
+//         return a/b;
+//     }
+//     if (type==="sub") {
+//         return a-b;
+//     }
+//     else{
+//         return 0;
+//     }
+// }
+// const result = calculate(10,10,"mul");
+// console.log(result);
+
