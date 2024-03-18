@@ -99,31 +99,58 @@
 
 
 // we can create multiple data type
-interface genderprops{
-    gender : "male" | "female"; // we can write string also
-    pronouns : "mard" | "aurat";// we can write string also
-}
+// interface genderprops{
+//     gender : "male" | "female"; // we can write string also
+//     pronouns : "mard" | "aurat";// we can write string also
+// }
 
-interface person {
-    name: string;
-    age: number;
+// interface person {
+//     name: string;
+//     age: number;
     
-    // gender : genderprops; // we can do like this or like below
-    gender : {
-        gender : "male" | "female";
-        pronouns : "mard" | "aurat";
-    };
-}
+//     // gender : genderprops; // we can do like this or like below
+//     gender : {
+//         gender : "male" | "female";
+//         pronouns : "mard" | "aurat";
+//     };
+// }
 
-function greet(person: person): string {
-    return "hello " + person.name + " your age is " + person.age + " you are " + person.gender.gender + " and  you are " + person.gender.pronouns;
-}
+// function greet(person: person): string {
+//     return "hello " + person.name + " your age is " + person.age + " you are " + person.gender.gender + " and  you are " + person.gender.pronouns;
+// }
 
-console.log(greet({
-    name: "kishan",
-    age: 21,
-    gender:{
-        gender:"male",
-        pronouns:"mard"
-    }
+// console.log(greet({
+//     name: "kishan",
+//     age: 21,
+//     gender:{
+//         gender:"male",
+//         pronouns:"mard"
+//     }
+// }))
+
+interface circle{
+    radius : number;
+    borderWidth ?:number; // ? it is used for optional parameter
+}
+interface Square{
+    side : number;
+}
+interface rectangle{
+    width : number;
+    height: number;
+}
+type shape = rectangle | circle | Square;
+
+// one method 
+// function renderShape(shape:rectangle | circle | Square) {
+//     console.log("rendered")
+// }
+
+// second method
+function renderShape(shape:shape) {
+    console.log("rendered")
+}
+console.log(renderShape({
+    radius:10,
+    // so the second argument is optional as it is not showing error
 }))
