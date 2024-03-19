@@ -196,3 +196,76 @@
 //     roll :24
 // }
 // console.log(user);
+
+// how to define array 
+// type num = number[];
+
+// function array(arr:num):number {
+//     return arr[0];
+// }
+// const value = array([1,2,3]);
+// console.log(value);
+
+// two ways to have multiple
+// type num = number[] | string [];
+// type num = (number | string )[];
+
+// function array(arr:num):(number | string) {
+//     return arr[0];
+// }
+// const value = array([1,2,3]);
+// const value2 = array(["one","two","three"]);
+// console.log(value2);
+
+// we cannot use string methods because we have 2 data types hover over the value or value2 
+// const upper =value2.toUpperCase()
+// console.log(upper)
+
+// <T> and T[] we use this to define array 
+// because we cannot use string function 
+// if the return type have many data type
+// function array<T>(arr:T[]) {
+//     return arr[0];
+// }
+// const value = array([1,2,3]);
+// const value2 = array(["one","two","three"]);
+// console.log(value2);
+// // now we can use this string methods
+// const upper =value2.toUpperCase()
+// console.log(upper)
+
+
+// swapping two elements of any type
+
+// function swapp<T>(a:T,b:T):[T,T] {
+//     return [b,a]; 
+// }
+// const a = swapp("b","c");
+// const b = swapp(3,4);
+
+
+// swapping two elements of two diffrent type
+// function swapp<T,U>(a:T,b:U):[U,T] {
+//     return [b,a]; 
+// }
+// const a = swapp("b",2);
+// const b = swapp("3",4);
+
+// it sets all argument to optional
+
+// interface todo{
+//     title:string;
+//     description:string;
+//     id:number;
+//     done:boolean;
+// }
+// // partial <object type >= make all the argument optionals
+// type updateTodoInput = Partial<todo>;
+// function updateTodo(id:number,newprops :updateTodoInput) {
+    
+// }
+// updateTodo(1,{
+//     description:"kishan shukla",
+//     title:"kishan"
+
+// })
