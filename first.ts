@@ -128,29 +128,71 @@
 //     }
 // }))
 
-interface circle{
-    radius : number;
-    borderWidth ?:number; // ? it is used for optional parameter
-}
-interface Square{
-    side : number;
-}
-interface rectangle{
-    width : number;
-    height: number;
-}
-type shape = rectangle | circle | Square;
+// interface circle{
+//     radius : number;
+//     borderWidth ?:number; // ? it is used for optional parameter
+// }
+// interface Square{
+//     side : number;
+// }
+// interface rectangle{
+//     width : number;
+//     height: number;
+// }
+// type shape = rectangle | circle | Square;
 
-// one method 
-// function renderShape(shape:rectangle | circle | Square) {
+// // one method 
+// // function renderShape(shape:rectangle | circle | Square) {
+// //     console.log("rendered")
+// // }
+
+// // second method
+// function renderShape(shape:shape) {
 //     console.log("rendered")
 // }
+// console.log(renderShape({
+//     // radius:10,
+//     width : 5,
+//     height: 5
+//     // so the second argument is optional as it is not showing error
+// }))
 
-// second method
-function renderShape(shape:shape) {
-    console.log("rendered")
-}
-console.log(renderShape({
-    radius:10,
-    // so the second argument is optional as it is not showing error
-}))
+// checking if no. is positive or negative
+// function no(num1:number) {
+//     if (num1 > 0){
+//         return "positive"
+//     }
+//     if (num1 < 0){
+//         return "negative"
+//     }
+//     return 0;
+// }
+
+// const val:number | string =no(-1);
+// console.log(val);
+
+
+// prime number
+// function prime(num1:number) {
+//     for (let i:number  = 2; i < num1; i++) {
+        
+//         if (num1%i===0) {
+//             return "not prime"
+//         }
+//     }
+//     return "prime";
+// }
+// const qt:string=prime(13)
+// console.log(qt)
+
+
+// defining new data type
+// interface user{
+//     name:string,
+//     roll : number,
+// }
+// const user:user ={  // user is interface 
+//     name:"kishan",
+//     roll :24
+// }
+// console.log(user);
